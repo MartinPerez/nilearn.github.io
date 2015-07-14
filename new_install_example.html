@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Bootstrap Case</title>
+  <title>Installation doc example</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
@@ -12,23 +12,209 @@
 
 <div class="container">
   <ul class="nav nav-tabs">
-    <li class="active"><a data-toggle="tab" href="#home">My OS is Linux</a></li>
-    <li><a data-toggle="tab" href="#menu1">My OS is Mac</a></li>
-    <li><a data-toggle="tab" href="#menu2">My OS is Windows</a></li>
+    <li class="active"><a data-toggle="tab" href="#linux">My OS is Linux</a></li>
+    <li><a data-toggle="tab" href="#mac">My OS is Mac</a></li>
+    <li><a data-toggle="tab" href="#windows">My OS is Windows</a></li>
   </ul>
 
   <div class="tab-content">
-    <div id="home" class="tab-pane fade in active">
-      <h3>HOME</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    <div id="linux" class="tab-pane fade in active">
+
+      <h3>1.2.1. Installing Python and dependencies</h3>
+      <p>Nilearn requires a Python installation and the following dependencies:</p>
+      <blockquote class="last">
+        <div><ul class="simple">
+        <li>scikit-learn (sometimes called <cite>sklearn</cite>, or <cite>python-sklearn</cite>)</li>
+        <li>matplotlib (sometimes called <cite>python-matplotlib</cite>)</li>
+        <li>ipython</li>
+        <li>nibabel (sometimes called <cite>python-nibabel</cite>)</li>
+        </ul>
+        </div>
+      </blockquote>
+      <p>We recommend that you install a complete scientific Python distribution, rather than downloading the bare Python. Given the richness of the scientific Python tool stack, installing the various required packages may be time-consuming and error prone.</p>
+      <p>Although the <a class="reference external" href="https://store.continuum.io/cshop/anaconda/">Anaconda</a> distribution is available for Linux, most recent linux
+      distributions come with all packages that are needed for nilearn.
+      Kindly ask your system administrator to install the following packages
+      using the distribution package manager:</p>
+
+
+      <h3>1.2.2. Installing nilearn<a class="headerlink" href="#id1" title="Permalink to this headline"></a></h3>
+      <p>The simplest way to install nilearn is to run the following command in
+      a command prompt:</p>
+      <div class="highlight-python"><div class="highlight"><pre>pip install -U --user nilearn
+      </pre></div>
+      </div>
+      <div class="admonition warning">
+      <p class="first admonition-title">Warning</p>
+      <p class="last">Note that this is a &#8220;shell&#8221; command, not a Python command. You
+      need to type it in the "Terminal".</p>
+      </div>
+
+      <h4>1.2.2.1. Testing your installation<a class="headerlink" href="#testing-your-installation" title="Permalink to this headline"></a></h4>
+      <p>To check whether everything is set up correctly, open IPython (an widely
+      used enhanced version of the Python prompt, cf. below) and type
+      in the following line:</p>
+      <div class="highlight-python"><div class="highlight"><pre>In [1]: import nilearn
+      </pre></div>
+      </div>
+      <p>If no error occurs, you have installed nilearn correctly.</p>
+
+      <h4>1.2.2.2. Installing the development version<a class="headerlink" href="#installing-the-development-version" title="Permalink to this headline"></a></h4>
+      <p><strong>Downloading</strong> If you really want the latest nilearn version, you can use
+      git as an alternative to using pip.</p>
+        <ul>
+        <li><p class="first">Simply run the following command (as a shell command, not a
+        Python command):</p>
+        <div class="highlight-python"><div class="highlight"><pre>git clone https://github.com/nilearn/nilearn.git
+        </pre></div>
+        </div>
+        </li>
+        </ul>
+      <p>In the future, you can readily update your copy of nilearn
+      by executing &#8220;git pull&#8221; in
+      the nilearn root directory (as a shell command).</p>
+      <p>If you really do not want to use git, you may still download the latest
+      development snapshot from the following link (unziping required):
+      <a class="reference external" href="https://github.com/nilearn/nilearn/archive/master.zip">https://github.com/nilearn/nilearn/archive/master.zip</a></p>
+      <p><strong>Installing</strong> In the <tt class="docutils literal"><span class="pre">nilearn</span></tt> directory created by the previous steps, run
+      (again, as a shell command):</p>
+      <div class="highlight-python"><div class="highlight"><pre>python setup.py install --user
+      </pre></div>
+      </div>
+      <p>To make sure that the installation was successful, just follow the
+      same steps as in <a class="reference internal" href="#testing-installation"><em>Testing your installation</em></a>.</p>
+
+
     </div>
-    <div id="menu1" class="tab-pane fade">
-      <h3>Menu 1</h3>
-      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    <div id="mac" class="tab-pane fade">
+
+      <h3>1.2.1. Installing Python and dependencies</h3>
+      <p>Nilearn requires a Python installation and the following dependencies:</p>
+      <blockquote class="last">
+        <div><ul class="simple">
+        <li>scikit-learn (sometimes called <cite>sklearn</cite>, or <cite>python-sklearn</cite>)</li>
+        <li>matplotlib (sometimes called <cite>python-matplotlib</cite>)</li>
+        <li>ipython</li>
+        <li>nibabel (sometimes called <cite>python-nibabel</cite>)</li>
+        </ul>
+        </div>
+      </blockquote>
+      <p>We recommend that you install a complete scientific Python distribution, rather than downloading the bare Python. Given the richness of the scientific Python tool stack, installing the various required packages may be time-consuming and error prone.</p>
+      <p>We suggest you to install 64 bit Anaconda. <a class="reference external" href="https://store.enthought.com/">Enthought Canopy</a>, <a class="reference external" href="http://code.google.com/p/pythonxy/">PythonXY</a> are alternative options. Enthought Canopy Express (download the free version) should provide the entirety of required packages.</p>
+
+
+<h3>1.2.2. Installing nilearn<a class="headerlink" href="#id1" title="Permalink to this headline"></a></h3>
+      <p>The simplest way to install nilearn is to run the following command in
+      a command prompt:</p>
+      <div class="highlight-python"><div class="highlight"><pre>pip install -U --user nilearn
+      </pre></div>
+      </div>
+      <div class="admonition warning">
+      <p class="first admonition-title">Warning</p>
+      <p class="last">Note that this is a &#8220;shell&#8221; command, not a Python command. You
+      need to type it in the "Terminal"</p>
+      </div>
+
+
+
+      </span><h4>1.2.2.1. Testing your installation<a class="headerlink" href="#testing-your-installation" title="Permalink to this headline">¶</a></h4>
+      <p>To check whether everything is set up correctly, open IPython (an widely
+      used enhanced version of the Python prompt, cf. below) and type
+      in the following line:</p>
+      <div class="highlight-python"><div class="highlight"><pre>In [1]: import nilearn
+      </pre></div>
+      </div>
+      <p>If no error occurs, you have installed nilearn correctly.</p>
+
+      <h4>1.2.2.2. Installing the development version<a class="headerlink" href="#installing-the-development-version" title="Permalink to this headline">¶</a></h4>
+      <p><strong>Downloading</strong> If you really want the latest nilearn version, you can use
+      git as an alternative to using pip.</p>
+      <ul>
+      <p>Simply go to
+      <a class="reference external" href="https://github.com/nilearn/nilearn">https://github.com/nilearn/nilearn</a> and click on the &#8216;Clone in Desktop&#8217;
+      button on the lower right of the webpage. This will install a program
+      that will automatically download nilearn and that you can use to update
+      nilearn.</p>
+      </ul>
+      <p>In the future, you can readily update your copy of nilearn
+      by executing &#8220;git pull&#8221; in
+      the nilearn root directory (as a shell command).</p>
+      <p>If you really do not want to use git, you may still download the latest
+      development snapshot from the following link (unziping required):
+      <a class="reference external" href="https://github.com/nilearn/nilearn/archive/master.zip">https://github.com/nilearn/nilearn/archive/master.zip</a></p>
+      <p><strong>Installing</strong> In the <tt class="docutils literal"><span class="pre">nilearn</span></tt> directory created by the previous steps, run
+      (again, as a shell command):</p>
+      <div class="highlight-python"><div class="highlight"><pre>python setup.py install --user
+      </pre></div>
+      </div>
+      <p>To make sure that the installation was successful, just follow the
+      same steps as in <a class="reference internal" href="#testing-installation"><em>Testing your installation</em></a>.</p>
+
+
+
     </div>
-    <div id="menu2" class="tab-pane fade">
-      <h3>Menu 2</h3>
-      <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
+    <div id="windows" class="tab-pane fade">
+
+<h3>1.2.1. Installing Python and dependencies</h3>
+      <p>Nilearn requires a Python installation and the following dependencies:</p>
+      <blockquote class="last">
+        <div><ul class="simple">
+        <li>scikit-learn (sometimes called <cite>sklearn</cite>, or <cite>python-sklearn</cite>)</li>
+        <li>matplotlib (sometimes called <cite>python-matplotlib</cite>)</li>
+        <li>ipython</li>
+        <li>nibabel (sometimes called <cite>python-nibabel</cite>)</li>
+        </ul>
+        </div>
+      </blockquote>
+      <p>We recommend that you install a complete scientific Python distribution, rather than downloading the bare Python. Given the richness of the scientific Python tool stack, installing the various required packages may be time-consuming and error prone.</p>
+      <p>We suggest you to install 64 bit Anaconda. <a class="reference external" href="https://store.enthought.com/">Enthought Canopy</a>, <a class="reference external" href="http://code.google.com/p/pythonxy/">PythonXY</a> are alternative options. Enthought Canopy Express (download the free version) should provide the entirety of required packages.</p>
+
+      <h3>1.2.2. Installing nilearn<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+      <p>The simplest way to install nilearn is to run the following command in
+      a command prompt:</p>
+      <div class="highlight-python"><div class="highlight"><pre>pip install -U --user nilearn
+      </pre></div>
+      </div>
+      <div class="admonition warning">
+      <p class="first admonition-title">Warning</p>
+      <p class="last">Note that this is a &#8220;shell&#8221; command, not a Python command. You
+      need to type it in command line of cmd.exe.</p>
+      </div>
+
+      <h4>1.2.2.1. Testing your installation<a class="headerlink" href="#testing-your-installation" title="Permalink to this headline">¶</a></h4>
+      <p>To check whether everything is set up correctly, open IPython (an widely
+      used enhanced version of the Python prompt, cf. below) and type
+      in the following line:</p>
+      <div class="highlight-python"><div class="highlight"><pre>In [1]: import nilearn
+      </pre></div>
+      </div>
+      <p>If no error occurs, you have installed nilearn correctly.</p>
+
+      <h4>1.2.2.2. Installing the development version<a class="headerlink" href="#installing-the-development-version" title="Permalink to this headline">¶</a></h4>
+      <p><strong>Downloading</strong> If you really want the latest nilearn version, you can use
+      git as an alternative to using pip.</p>
+      <ul>
+      <p>Simply go to
+      <a class="reference external" href="https://github.com/nilearn/nilearn">https://github.com/nilearn/nilearn</a> and click on the &#8216;Clone in Desktop&#8217;
+      button on the lower right of the webpage. This will install a program
+      that will automatically download nilearn and that you can use to update
+      nilearn.</p>
+      </ul>
+      <p>In the future, you can readily update your copy of nilearn
+      by executing &#8220;git pull&#8221; in
+      the nilearn root directory (as a shell command).</p>
+      <p>If you really do not want to use git, you may still download the latest
+      development snapshot from the following link (unziping required):
+      <a class="reference external" href="https://github.com/nilearn/nilearn/archive/master.zip">https://github.com/nilearn/nilearn/archive/master.zip</a></p>
+      <p><strong>Installing</strong> In the <tt class="docutils literal"><span class="pre">nilearn</span></tt> directory created by the previous steps, run
+      (again, as a shell command):</p>
+      <div class="highlight-python"><div class="highlight"><pre>python setup.py install --user
+      </pre></div>
+      </div>
+      <p>To make sure that the installation was successful, just follow the
+      same steps as in <a class="reference internal" href="#testing-installation"><em>Testing your installation</em></a>.</p>
+
+
     </div>
   </div>
 </div>
