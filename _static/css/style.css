@@ -1,28 +1,49 @@
+
 ul#tabs {
   list-style-type: none;
   margin: 0 0 0px 0;
   padding: 0;
   text-align: center; }
   ul#tabs li {
+    font-size:20px;
     display: inline-block;
-    background-color: #BFDCEC;
-    border-bottom: solid 5px #11557C;
+    background-color: #ADD8E6;
+    border-bottom: solid 5px #F3E5E5;
     padding: 5px 20px;
-    margin-bottom: 4px;
+    margin-bottom: 0px;
     color: black;
     cursor: pointer; }
     ul#tabs li:hover {
-      background-color: #11557C; }
+      color: black;
+      background-color: #F3E5E5; }
     ul#tabs li.active {
-      background-color: #11557C; }
+      color: black;
+      background-color: #F3E5E5; }
 
 ul#tab {
   list-style-type: none;
   margin: 0;
-  padding: 0; }
+  padding: 0;
+
+
+  background:#FF7F50;
+  -moz-box-shadow: 3px 4px 0px 0px #ADD8E6;
+  -webkit-box-shadow: 3px 4px 0px 0px #ADD8E6;
+  box-shadow: 8px 8px 0px 0px #ADD8E6;
+  background-color:#F3E5E5;
+  -moz-border-radius:5px;
+  -webkit-border-radius:5px;
+  border-radius:5px;
+  border:1px solid #F3E5E5;
+  color: black;
+  font-family:Arial;
+  font-size:17px;
+  font-weight:bold;
+  padding:12px 44px;
+  text-decoration:none;}
   ul#tab li {
     display: none;
-    padding: 5px;
+    padding: 0px;
     border: solid 0px #d2f4e9; }
     ul#tab li.active {
       display: block; }
@@ -30,5 +51,39 @@ ul#tab {
       font-weight: 400;
       margin-bottom: 30px;
       padding-bottom: 5px;
-      border-bottom: solid 5px #32c896; }
+      background-color: #FFFAF0}
+    ul#tab li div#code{
+      font-size:15px;
+      color: black;
+      background-color: white;
+    }
+    ul#tab li p{
+      font-size:15px;
+      font-weight:normal;
+    }
+    ul#tab li p#emphasize{
+      font-size:25px;
+    }
+    ul#tab li p#clarify{
+      font-size:10px;
+      padding:0px;
+    }
 
+    /* unvisited link */
+    a.goto:link {
+        color: #000000;
+    }
+    /* visited link */
+    a.goto:visited {
+        color: #000000;
+    }
+    /* mouse over link */
+    a.goto:hover {
+        color: #000000;
+        text-decoration: underline;
+    }
+    /* selected link */
+    a.goto:active {
+        color: #000000;
+        text-decoration: underline;
+    }
