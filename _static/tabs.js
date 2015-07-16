@@ -19,6 +19,7 @@ $(document).ready(function(){
             $("ul#tabs li.active").removeClass("active");
             $(this).addClass("active");
             $("ul#tab li.active").removeClass("active");
+            jQuery("ul#tab li:nth-child("+nthChild+")").fadeIn(400).siblings().hide();
             $("ul#tab li:nth-child("+nthChild+")").addClass("active");
         }
     });
